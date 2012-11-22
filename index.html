@@ -2,21 +2,51 @@
 <html lang="en-gb">
 <head>
   <meta charset="utf-8">
-  <title>socialite.weibo</title>
+  <title>Socialite Weibo extension</title>
+  <link rel="stylesheet" href="http://necolas.github.com/normalize.css/2.0.1/normalize.css">
+  <style>
+    body {
+      width: 480px;
+      max-width: 90%;
+      margin: 1em auto;
+    }
+    h1 {
+      margin: 0;
+      font-weight: normal;
+    }
+    a {
+        color: #004AB6;
+        text-decoration: none;
+        -webkit-transition: color 250ms ease-in-out;
+           -moz-transition: color 250ms ease-in-out;
+            -ms-transition: color 250ms ease-in-out;
+             -o-transition: color 250ms ease-in-out;
+                transition: color 250ms ease-in-out;
+      }
+
+      a:hover,
+      a:focus,
+      a:active {
+        color: #002050;
+      }
+  </style>
 </head>
 <body>
 
-  <div>
-    <a href="http://twitter.com/share" class="socialite twitter-share" data-via="silu" data-count="none" rel="nofollow"></a>
-  </div>
+  <h1>Weibo extension for Socialite</h1>
 
-  <div>
-    <a href="http://service.weibo.com/share/share.php" class="socialite weibo-share" data-ralateuid="2830935854" rel="nofollow">Weibo</a>
-  </div>
+  <p>
+    <a href="http://service.weibo.com/share/share.php" class="socialite weibo-share" rel="nofollow">Weibo</a>
+  </p>
 
-  <div>
-    <a href="http://service.weibo.com/share/share.php" class="socialite weibo-share" rel="nofollow" data-type="4" data-width="142" data-height="66" data-url="http://monospaced/co.uk" data-title="Monospaced Ltd" data-count="1">Weibo</a>
-  </div>
+  <p>
+    <a href="http://service.weibo.com/share/share.php" class="socialite weibo-share" rel="nofollow" data-type="4" data-width="142" data-height="66" data-url="http://monospaced/co.uk" data-title="Monospaced Ltd" data-count="1" data-ralateuid="1234567890">Weibo</a>
+  </p>
+
+  <small>
+    <a href="https://github.com/monospaced/Socialite/blob/master/extensions/socialite.weibo.js">http://github.com/monospaced/Socialite</a> <br>
+    <a href="http://monospaced.github.com/">Monospaced Labs</a>
+  </small>
 
   <script src="socialite.js"></script>
   <script src="extensions/socialite.weibo.js"></script>
@@ -24,7 +54,8 @@
     window.onload = function(){
       Socialite.setup({
           weibo: {
-              appkey: '2830935854'
+              language: 'zh_tw'//,
+              //appkey: '1234567890'
           }
       });
       Socialite.load();
