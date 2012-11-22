@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <title>socialite.weibo</title>
+</head>
+<body>
+
+  <div>
+    <a href="http://twitter.com/share" class="socialite twitter-share" data-via="silu" data-count="none" rel="nofollow"></a>
+  </div>
+
+  <div>
+    <a href="http://service.weibo.com/share/share.php" class="socialite weibo-share" data-ralateuid="2830935854" rel="nofollow">Weibo</a>
+  </div>
+
+  <div>
+    <a href="http://service.weibo.com/share/share.php" class="socialite weibo-share" rel="nofollow" data-type="4" data-width="142" data-height="66" data-url="http://monospaced/co.uk" data-title="Monospaced Ltd" data-count="1">Weibo</a>
+  </div>
+
+  <script src="socialite.js"></script>
+  <script src="extensions/socialite.weibo.js"></script>
+  <script>
+    window.onload = function(){
+      Socialite.setup({
+          weibo: {
+              appkey: '2830935854'
+          }
+      });
+      Socialite.load();
+    }
+  </script>
+</body>
+</html>
